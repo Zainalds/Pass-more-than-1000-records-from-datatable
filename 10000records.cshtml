@@ -10,6 +10,9 @@
     </script>
 }
 
+
+//This goes in Startup.cs
+
             services.Configure<FormOptions>(x => x.ValueCountLimit = int.MaxValue);
             services.AddCors(); // Make sure you call this previous to AddMvc
             
