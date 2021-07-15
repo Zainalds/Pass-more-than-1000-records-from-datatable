@@ -1,0 +1,20 @@
+@section Scripts{
+    <script>
+    function ChangeDataTableLength()
+    {
+        table = $('#datatableWithCheckboxSelect').DataTable({
+            retrieve: true
+        });
+        table.page.len(-1).draw();
+    }
+    </script>
+}
+
+            services.Configure<FormOptions>(x => x.ValueCountLimit = int.MaxValue);
+            services.AddCors(); // Make sure you call this previous to AddMvc
+            
+            services.AddMvc(options =>
+            {
+                options.MaxModelBindingCollectionSize = int.MaxValue;
+            });
+            services.Configure<FormOptions>(options => { options.MemoryBufferThreshold = int.MaxValue; options.MultipartBodyLengthLimit = int.MaxValue; });
