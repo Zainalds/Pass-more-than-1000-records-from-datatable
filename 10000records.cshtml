@@ -11,7 +11,7 @@
 }
 
 
-//This goes in Startup.cs
+//This goes in Startup.cs - public void ConfigureServices(IServiceCollection services)
 
             services.Configure<FormOptions>(x => x.ValueCountLimit = int.MaxValue);
             services.AddCors(); // Make sure you call this previous to AddMvc
